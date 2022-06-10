@@ -10,7 +10,8 @@ const config = {
       default: true
     },
     browser: {
-      hydrate: false
+      hydrate: false,
+      router: false
     },
     trailingSlash: 'always'
   },
