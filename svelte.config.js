@@ -12,7 +12,8 @@ const config = {
     browser: {
       hydrate: false,
       router: false
-    }
+    },
+    trailingSlash: 'always'
   },
 
   preprocess: [
