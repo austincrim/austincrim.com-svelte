@@ -6,10 +6,10 @@
 
 <a sveltekit:prefetch class="group" href={`/blog/${post.slug}`}>
   <article
-    class="relative flex items-center transition-transform sm:group-hover:-translate-x-2 sm:group-focus-visible:-translate-x-2"
+    class="relative flex items-center transition-transform mouse:group-hover:-translate-x-2 group-focus-visible:-translate-x-2"
   >
     <div
-      class="flex flex-col flex-grow py-8 space-y-1 text-base rounded sm:px-8 sm:shadow-md sm:bg-off-base"
+      class="flex flex-col flex-grow p-8 space-y-1 text-base border border-gray-200 rounded shadow-md bg-off-base"
     >
       <div
         class="flex flex-col justify-between space-y-2 md:space-y-0 md:space-x-2 md:flex-row md:items-baseline"

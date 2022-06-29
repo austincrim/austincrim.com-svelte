@@ -23,6 +23,10 @@ module.exports = {
       borderColor: {
         primary: 'rgb(var(--color-primary))'
       },
+      screens: {
+        touch: { raw: '(pointer: coarse)' },
+        mouse: { raw: '(pointer: fine)' }
+      },
       typography: (theme) => ({
         theme: {
           css: [

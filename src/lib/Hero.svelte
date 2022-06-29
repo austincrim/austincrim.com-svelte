@@ -1,9 +1,10 @@
 <script>
+  import Blob from './Blob.svelte'
   import { RightArrow } from './Icons.js'
 </script>
 
 <div
-  class="flex flex-col justify-between my-20 hero space-y-14 sm:items-end sm:flex-row"
+  class="flex flex-col justify-between my-20 hero space-y-10 sm:items-end sm:flex-row"
 >
   <div class="flex flex-col sm:w-2/3">
     <h1 class="text-5xl">
@@ -31,4 +32,17 @@
       </span>
     </a>
   </div>
+</div>
+<div class="border-2 border-gray-600 rounded about relative overflow-hidden">
+  <Blob color="bg-blue-500" />
+  <Blob color="bg-violet-700" />
+  <Blob color="bg-indigo-400" />
+  <p class="text-xl leading-loose max-w-[80ch] relative p-6 backdrop-blur-xl">
+    I started out as a 19-year old COBOL programmer and now I work at <a
+      class="link"
+      href="https://prisma.io">Prisma</a
+    >. Chat with me about Svelte,
+    <a class="link" href="https://perusingtheplatform.com">web APIs</a>,
+    guitars, or what counts as an ORM.
+  </p>
 </div>

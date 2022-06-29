@@ -23,16 +23,7 @@
 </svelte:head>
 <main>
   <Hero />
-  <!-- <Section title="Places I Have Appeared" id="appearances">
-            <ul class="flex flex-col gap-20 py-8">
-              {appearances.map((appearance) => (
-                <li key={appearance.title}>
-                  <Appearance appearance={appearance} />
-                </li>
-              ))}
-            </ul>
-          </Section> -->
-  <Section title="What I'm Up To">
+  <Section title="What I'm Writing">
     <div class="flex flex-col gap-10 py-8">
       <ul class="flex flex-col gap-20 ">
         {#each posts as post (post.slug)}
@@ -44,6 +35,7 @@
       <a
         class="self-end text-lg font-semibold transition-colors text-primary hover:text-secondary group"
         href="/blog"
+        sveltekit:prefetch
       >
         <span class="mr-1">Read more</span>
         <span
@@ -54,15 +46,6 @@
       </a>
     </div>
   </Section>
-  <!-- <Section title="Things I Have Built" id="portfolio">
-            <ul class="flex flex-col gap-10">
-              {projects.map((project) => (
-                <li key={project.title}>
-                  <ProjectCard project={project} />
-                </li>
-              ))}
-            </ul>
-          </Section> -->
 </main>
 
 <Footer>
