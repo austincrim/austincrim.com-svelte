@@ -5,6 +5,16 @@ import { NotionToMarkdown } from 'notion-to-md'
 import { marked } from 'marked'
 import hl from 'highlight.js'
 
+marked.setOptions({
+  highlight: (code, lang) => {
+    try {
+      return hl.highlight(code, { language: lang, ignoreIllegals: true }).value
+    } catch (e) {
+      return code
+    }
+  }
+})
+
 // export type PostProperties = {
 //   title: string
 //   lede: string
@@ -45,16 +55,7 @@ export async function getPostProperties(slug) {
   })
   let [parsed] = parseDatabaseProperties(result)
   let markdown = await getPostMarkdown(result.results[0].id)
-  marked.setOptions({
-    highlight: (code, lang) => {
-      try {
-        return hl.highlight(code, { language: lang, ignoreIllegals: true })
-          .value
-      } catch (e) {
-        return code
-      }
-    }
-  })
+
   let html = marked.parse(markdown)
 
   parsed = { ...parsed, html }

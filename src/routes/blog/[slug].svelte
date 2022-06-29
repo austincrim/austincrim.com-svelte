@@ -13,8 +13,8 @@
 </svelte:head>
 
 <article class={`flex flex-col justify-around pb-16 space-y-10 text-base`}>
-  <div class="flex flex-col space-y-4">
-    <h1 class="inline pt-10 text-4xl text-primary heading">
+  <div class="flex flex-col space-y-4 heading">
+    <h1 class="inline pt-10 text-4xl text-primary ">
       {post.title}
     </h1>
     <span class="text-lg">{post.lede}</span>
@@ -23,7 +23,7 @@
     </span>
   </div>
   <div class="max-w-4xl">
-    <div class="mt-8 leading-loose prose prose-theme max-w-none article">
+    <div class="mt-8 leading-loose prose max-w-none article text-xl">
       {@html post.html}
     </div>
   </div>

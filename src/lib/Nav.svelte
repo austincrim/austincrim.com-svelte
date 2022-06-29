@@ -5,7 +5,7 @@
 
 <nav class="p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl">
   <div class="flex items-baseline justify-between">
-    <div class="space-x-6 md:space-x-14">
+    <div class="space-x-6 md:space-x-14 text-xl">
       <a
         sveltekit:prefetch
         class="transition-colors hover:text-muted-hover"

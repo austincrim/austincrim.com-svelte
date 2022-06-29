@@ -4,7 +4,7 @@
 
 <a sveltekit:prefetch class="group" href={`/blog/${post.slug}`}>
   <article
-    class="relative flex items-center transition-all ease-out mouse:group-hover:-translate-y-1 mouse:group-active:translate-y-0 mouse:group-active:shadow mouse:group-hover:shadow-md group-focus-visible:-translate-y-1"
+    class="relative flex items-center transition-all ease-out mouse:group-hover:-translate-y-1 mouse:group-active:translate-y-0 mouse:group-active:shadow-none mouse:group-hover:shadow-md group-focus-visible:-translate-y-1"
   >
     <div
       class="flex flex-col flex-grow p-8 space-y-1 text-base border border-gray-200 rounded shadow bg-off-base"

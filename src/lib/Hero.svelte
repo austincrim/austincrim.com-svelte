@@ -35,14 +35,14 @@
 </div>
 <div class="border-2 border-gray-600 rounded about relative overflow-hidden">
   <Blob color="bg-blue-200" />
-  <Blob color="bg-sky-200" />
+  <Blob color="bg-fuchsia-200" />
   <Blob color="bg-indigo-200" />
   <p class="text-xl leading-loose max-w-[80ch] relative p-6 backdrop-blur-xl">
     I started out as a 19-year old COBOL programmer and now I work at <a
       class="link"
       href="https://prisma.io">Prisma</a
     >. Chat with me about Svelte,
-    <a class="link" href="https://perusingtheplatform.com">web APIs</a>,
-    guitars, or what counts as an ORM.
+    <a class="link" href="https://perusingtheplatform.com">web APIs</a>, or
+    guitars.
   </p>
 </div>
