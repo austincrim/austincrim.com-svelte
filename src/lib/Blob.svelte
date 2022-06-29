@@ -48,9 +48,14 @@
   })
 </script>
 
-<div bind:this={blob} class="dvd w-10 h-10 absolute rounded-full p-2 {color}" />
+<div bind:this={blob} class="dvd w-20 h-20 absolute rounded-full p-2 {color}" />
 
 <style>
+  @supports not (backdrop-filter: blur(24px)) {
+    div {
+      filter: blur(24px);
+    }
+  }
   div {
     display: none;
   }

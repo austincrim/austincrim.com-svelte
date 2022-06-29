@@ -34,9 +34,9 @@
   </div>
 </div>
 <div class="border-2 border-gray-600 rounded about relative overflow-hidden">
-  <Blob color="bg-blue-500" />
-  <Blob color="bg-violet-700" />
-  <Blob color="bg-indigo-400" />
+  <Blob color="bg-blue-200" />
+  <Blob color="bg-sky-200" />
+  <Blob color="bg-indigo-200" />
   <p class="text-xl leading-loose max-w-[80ch] relative p-6 backdrop-blur-xl">
     I started out as a 19-year old COBOL programmer and now I work at <a
       class="link"
