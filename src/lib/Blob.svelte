@@ -1,13 +1,12 @@
 <script>
-  import { onDestroy } from 'svelte'
-
-  import { onMount } from 'svelte'
+  import { onMount, onDestroy } from 'svelte'
 
   /** @type {HTMLElement} */
   let blob
   export let speedX = Math.random()
   export let speedY = Math.random()
   export let color
+
   function moveBlob() {
     let parentBounds = blob.parentElement.getBoundingClientRect()
     let bounds = blob.getBoundingClientRect()
@@ -34,6 +33,12 @@
 
   let interval
   onMount(() => {
+    let parentBounds = blob.parentElement.getBoundingClientRect()
+    let initialX = Math.floor(Math.random() * parentBounds.width)
+    let initialY = Math.floor(Math.random() * parentBounds.height) - blob.height
+    blob.style.left = `${initialX}px`
+    blob.style.top = `${initialY}px`
+    blob.style.display = 'block'
     interval = setInterval(() => {
       moveBlob()
     }, 14)
@@ -44,3 +49,9 @@
 </script>
 
 <div bind:this={blob} class="dvd w-10 h-10 absolute rounded-full p-2 {color}" />
+
+<style>
+  div {
+    display: none;
+  }
+</style>

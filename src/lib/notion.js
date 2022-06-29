@@ -44,7 +44,7 @@ export async function getPostProperties(slug) {
     }
   })
   let [parsed] = parseDatabaseProperties(result)
-  let markdown = await getPostMarkdown(result.results[0])
+  let markdown = await getPostMarkdown(result.results[0].id)
   marked.setOptions({
     highlight: (code, lang) => {
       try {
