@@ -8,7 +8,7 @@
   <title>{post.title} | Austin Crim</title>
   <meta name="description" content={post.content} />
   <meta name="og:title" content={post.title} />
-  <meta name="og:image" content="https://austincrim/og/{post.slug}.png" />
+  <meta name="og:image" content="https://austincrim.com/og/{post.slug}.png" />
   <meta name="og:url" content="https://austincrim.com/{post.slug}" />
 </svelte:head>
 

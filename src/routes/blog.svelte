@@ -15,7 +15,7 @@
     name="og:title"
     content="The personal blog of Austin Crim, a web builder"
   />
-  <meta name="og:image" content="https://austincrim/og/blog.png" />
+  <meta name="og:image" content="https://austincrim.com/og/blog.png" />
   <meta name="og:url" content="https://austincrim.com" />
 </svelte:head>
 
