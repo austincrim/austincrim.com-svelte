@@ -1,5 +1,5 @@
 <script>
-  import { onMount, onDestroy } from 'svelte'
+  import { onMount } from 'svelte'
 
   /** @type {HTMLElement} */
   let blob
@@ -29,9 +29,9 @@
     let newTop = topPx + speedY
     blob.style.left = `${newLeft}px`
     blob.style.top = `${newTop}px`
+    requestAnimationFrame(moveBlob)
   }
 
-  let interval
   onMount(() => {
     let parentBounds = blob.parentElement.getBoundingClientRect()
     let initialX = Math.floor(Math.random() * parentBounds.width)
@@ -39,12 +39,7 @@
     blob.style.left = `${initialX}px`
     blob.style.top = `${initialY}px`
     blob.style.display = 'block'
-    interval = setInterval(() => {
-      moveBlob()
-    }, 14)
-  })
-  onDestroy(() => {
-    clearInterval(interval)
+    moveBlob()
   })
 </script>
 
