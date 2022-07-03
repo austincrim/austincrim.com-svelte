@@ -22,7 +22,7 @@
 <div
   class="flex flex-col max-w-5xl mx-auto my-20 space-y-12 dark:text-gray-50 md:rounded-lg"
 >
-  <h3 class="text-4xl">Posts</h3>
+  <h3 class="text-4xl text-primary">Posts</h3>
   {#each posts as post (post.slug)}
     <PostPreview {post} />
   {/each}
