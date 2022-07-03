@@ -3,7 +3,7 @@
   import { page } from '$app/stores'
   import { spring } from 'svelte/motion'
 
-  let activeBorderPosition = spring(0, {
+  let activeBorderPosition = spring(-10, {
       stiffness: 0.13,
       damping: 0.2,
       precision: 0.1
