@@ -3,14 +3,15 @@
   import { page } from '$app/stores'
   import { spring } from 'svelte/motion'
 
-  let activeBorderPosition = spring(-10, {
+  let activeBorderPosition = spring(0, {
       stiffness: 0.13,
       damping: 0.2,
       precision: 0.1
     }),
     activeLink,
     linkEls = {},
-    linkBorderEl
+    linkBorderEl,
+    navEl
   $: {
     activeLink = $page.url.pathname.includes('/blog') ? 'blog' : 'home'
     if (linkBorderEl) {
@@ -18,7 +19,8 @@
         linkEls[activeLink].getBoundingClientRect().width
       }px`
       activeBorderPosition.set(
-        linkEls[activeLink].getBoundingClientRect().x + 1
+        linkEls[activeLink].getBoundingClientRect().x -
+          navEl.getBoundingClientRect().x
       )
     }
   }
@@ -30,7 +32,10 @@
   }
 </script>
 
-<nav class="p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl relative">
+<nav
+  bind:this={navEl}
+  class="p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl relative"
+>
   <div class="flex items-baseline justify-between">
     <div class="text-xl">
       <a
