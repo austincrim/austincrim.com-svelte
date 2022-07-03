@@ -1,27 +1,63 @@
 <script>
   import { GitHubLogo, TwitterLogo, YoutubeLogo } from './Icons'
   import { page } from '$app/stores'
+  import { spring } from 'svelte/motion'
+
+  let activeBorderPosition = spring(-10, {
+      stiffness: 0.13,
+      damping: 0.2,
+      precision: 0.1
+    }),
+    activeLink,
+    linkEls = {},
+    linkBorderEl
+  $: {
+    activeLink = $page.url.pathname.includes('/blog') ? 'blog' : 'home'
+    if (linkBorderEl) {
+      linkBorderEl.style.width = `${
+        linkEls[activeLink].getBoundingClientRect().width
+      }px`
+      activeBorderPosition.set(
+        linkEls[activeLink].getBoundingClientRect().x + 1
+      )
+    }
+  }
+
+  function nudgeBorder(link, value) {
+    if (link === activeLink) return
+
+    activeBorderPosition.update((pos) => pos + value)
+  }
 </script>
 
-<nav class="p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl">
+<nav class="p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl relative">
   <div class="flex items-baseline justify-between">
-    <div class="space-x-6 md:space-x-14 text-xl">
+    <div class="text-xl">
       <a
+        bind:this={linkEls['home']}
         sveltekit:prefetch
-        class="transition-colors hover:text-muted-hover"
-        class:active={$page.url.pathname === '/'}
+        class="inline-block transition-colors hover:text-muted-hover mr-6 md:mr-14"
         href="/"
+        on:mouseenter={() => nudgeBorder('home', -10)}
+        on:mouseout={() => nudgeBorder('home', 10)}
       >
         Home
       </a>
       <a
+        bind:this={linkEls['blog']}
         sveltekit:prefetch
-        class="transition-colors hover:text-muted-hover"
-        class:active={$page.url.pathname.includes('/blog')}
+        class="inline-block transition-colors hover:text-muted-hover"
         href="/blog"
+        on:mouseenter={() => nudgeBorder('blog', 10)}
+        on:mouseout={() => nudgeBorder('blog', -10)}
       >
         Blog
       </a>
+      <div
+        bind:this={linkBorderEl}
+        style="transform: translatex({$activeBorderPosition}px)"
+        class="linkBorder transition-[width] absolute bottom-8 left-0 h-[2px] bg-blue-500"
+      />
     </div>
     <div class="flex items-baseline space-x-8">
       <a
