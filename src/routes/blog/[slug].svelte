@@ -23,7 +23,9 @@
     </span>
   </div>
   <div class="max-w-4xl">
-    <div class="mt-8 leading-loose prose max-w-none article text-xl">
+    <div
+      class="mt-8 leading-loose prose prose-pre:text-gray-800 prose-pre:bg-gray-50 max-w-none article text-xl"
+    >
       {@html post.html}
     </div>
   </div>
