@@ -44,7 +44,9 @@
         class="inline-block transition-colors hover:text-muted-hover mr-6 md:mr-14"
         href="/"
         on:mouseenter={() => nudgeBorder('home', -10)}
+        on:focus={() => nudgeBorder('home', -10)}
         on:mouseout={() => nudgeBorder('home', 10)}
+        on:blur={() => nudgeBorder('home', 10)}
       >
         Home
       </a>
@@ -54,7 +56,9 @@
         class="inline-block transition-colors hover:text-muted-hover"
         href="/blog"
         on:mouseenter={() => nudgeBorder('blog', 10)}
+        on:focus={() => nudgeBorder('blog', 10)}
         on:mouseout={() => nudgeBorder('blog', -10)}
+        on:blur={() => nudgeBorder('blog', -10)}
       >
         Blog
       </a>
