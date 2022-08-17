@@ -40,7 +40,6 @@
     <div class="text-xl">
       <a
         bind:this={linkEls['home']}
-        sveltekit:prefetch
         class="inline-block transition-colors hover:text-muted-hover mr-6 md:mr-14"
         href="/"
         on:mouseenter={() => nudgeBorder('home', -10)}
@@ -52,7 +51,6 @@
       </a>
       <a
         bind:this={linkEls['blog']}
-        sveltekit:prefetch
         class="inline-block transition-colors hover:text-muted-hover"
         href="/blog"
         on:mouseenter={() => nudgeBorder('blog', 10)}

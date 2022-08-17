@@ -6,7 +6,8 @@ const config = {
   kit: {
     adapter: adapter(),
     prerender: {
-      default: true
+      default: true,
+      concurrency: 5
     },
     trailingSlash: 'always'
   },

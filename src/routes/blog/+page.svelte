@@ -3,7 +3,6 @@
 
   /** @type import ('./$types').PageData)*/
   export let data
-  export const prerender = true
 </script>
 
 <svelte:head>

@@ -35,7 +35,6 @@
       <a
         class="self-end text-lg font-semibold transition-colors text-primary hover:text-secondary group"
         href="/blog"
-        sveltekit:prefetch
       >
         <span class="mr-1">Read more</span>
         <span
