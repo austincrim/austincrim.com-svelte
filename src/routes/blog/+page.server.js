@@ -1,5 +1,6 @@
 import { getAllPostProperties } from '$lib/notion'
-export async function get() {
+
+export async function load() {
   let posts = await getAllPostProperties()
-  return { body: { posts: posts.slice(0, 5) } }
+  return { posts }
 }
