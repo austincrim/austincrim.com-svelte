@@ -5,7 +5,7 @@
   import PostPreview from '$lib/PostPreview.svelte'
   import Section from '$lib/Section.svelte'
 
-  export let posts
+  export let data
 </script>
 
 <svelte:head>
@@ -26,7 +26,7 @@
   <Section title="What I'm Writing">
     <div class="flex flex-col gap-10 py-8">
       <ul class="flex flex-col gap-20 ">
-        {#each posts as post (post.slug)}
+        {#each data.posts as post (post.slug)}
           <li>
             <PostPreview {post} />
           </li>

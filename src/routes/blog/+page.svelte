@@ -1,7 +1,8 @@
 <script>
   import PostPreview from '$lib/PostPreview.svelte'
 
-  export let posts = []
+  /** @type import ('./$types').PageData)*/
+  export let data
   export const prerender = true
 </script>
 
@@ -23,7 +24,7 @@
   class="flex flex-col max-w-5xl mx-auto my-20 space-y-12 dark:text-gray-50 md:rounded-lg"
 >
   <h3 class="text-4xl text-primary">Posts</h3>
-  {#each posts as post (post.slug)}
+  {#each data.posts as post (post.slug)}
     <PostPreview {post} />
   {/each}
 </div>
