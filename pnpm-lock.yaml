@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@notionhq/client': ^1.0.4
   '@sveltejs/adapter-static': 1.0.0-next.39
-  '@sveltejs/kit': 1.0.0-next.415
+  '@sveltejs/kit': 1.0.0-next.418
   '@tailwindcss/typography': ^0.5.2
   autoprefixer: ^10.4.4
   dotenv: ^16.0.1
@@ -29,7 +29,7 @@ dependencies:
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.39
-  '@sveltejs/kit': 1.0.0-next.415_svelte@3.48.0+vite@3.0.8
+  '@sveltejs/kit': 1.0.0-next.418_svelte@3.48.0+vite@3.0.8
   autoprefixer: 10.4.7_postcss@8.4.14
   postcss: 8.4.14
   postcss-load-config: 3.1.4_postcss@8.4.14
@@ -102,14 +102,14 @@ packages:
     resolution: {integrity: sha512-EeD39H6iEe0UEKnKxLFTZFZpi/FcX5xfbAvsMQ+B09aDZccpQmkJBSIo+4kq1JsQGSjwi/+J3aE9bR67R6CIyQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.415_svelte@3.48.0+vite@3.0.8:
-    resolution: {integrity: sha512-XtiiEW/LuhYeT0YdyLxNA+lCcu+1NMhLd4xM8ZYJ//x408eM9Oeckfh8qmzcBurksaZEZHd1cwHscSkOnJLOww==}
+  /@sveltejs/kit/1.0.0-next.418_svelte@3.48.0+vite@3.0.8:
+    resolution: {integrity: sha512-lR1iNXOln3e6gl4KxiylIF3fQNrLmD0KhWUD09IKRIkkL3DJ5e7kwaX/CEsYJqVt0tg7jwMxQVlpcvFNFnRRLQ==}
     engines: {node: '>=16.9'}
     hasBin: true
     requiresBuild: true
     peerDependencies:
       svelte: ^3.44.0
-      vite: ^3.0.0
+      vite: 3.0.2
     dependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.48.0+vite@3.0.8
       chokidar: 3.5.3
@@ -120,11 +120,11 @@ packages:
       mime: 3.0.0
       node-fetch: 3.2.10
       sade: 1.8.1
-      set-cookie-parser: 2.5.0
+      set-cookie-parser: 2.5.1
       sirv: 2.0.2
       svelte: 3.48.0
       tiny-glob: 0.2.9
-      undici: 5.8.2
+      undici: 5.9.1
       vite: 3.0.8
     transitivePeerDependencies:
       - diff-match-patch
@@ -1100,8 +1100,8 @@ packages:
       rimraf: 2.7.1
     dev: true
 
-  /set-cookie-parser/2.5.0:
-    resolution: {integrity: sha512-cHMAtSXilfyBePduZEBVPTCftTQWz6ehWJD5YNUg4mqvRosrrjKbo4WS8JkB0/RxonMoohHm7cOGH60mDkRQ9w==}
+  /set-cookie-parser/2.5.1:
+    resolution: {integrity: sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==}
     dev: true
 
   /sirv/2.0.2:
@@ -1295,8 +1295,8 @@ packages:
     hasBin: true
     dev: true
 
-  /undici/5.8.2:
-    resolution: {integrity: sha512-3KLq3pXMS0Y4IELV045fTxqz04Nk9Ms7yfBBHum3yxsTR4XNn+ZCaUbf/mWitgYDAhsplQ0B1G4S5D345lMO3A==}
+  /undici/5.9.1:
+    resolution: {integrity: sha512-6fB3a+SNnWEm4CJbgo0/CWR8RGcOCQP68SF4X0mxtYTq2VNN8T88NYrWVBAeSX+zb7bny2dx2iYhP3XHi00omg==}
     engines: {node: '>=12.18'}
     dev: true
 
